@@ -59,7 +59,7 @@
 						<p><input class="btn" type="submit" value="Выполнить" name="button" /></p>
 					</form>
 				
-				
+	<div class="output">			
     <?php
         function validation() {
             $massA = (string)$_POST["massA"];
@@ -293,6 +293,7 @@
             validation();
         }
     ?>
+	</div>
 					
 			</div>
 			
