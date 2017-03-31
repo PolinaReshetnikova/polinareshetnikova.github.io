@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>The First. Lab1</title>
+		<title>The First.Lab1</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
@@ -9,8 +9,6 @@
 
 
 			<div id="header" class="menu">
-
-				<div class="top">
 
 						<div id="logo">
 							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
@@ -28,7 +26,7 @@
 								<li><a href="#new">Лабораторные ДМ</span></a>
 									<ul class="sub-menu">
 										<li><a href="#1"><a href="dm1.php">Первая</a></span></a></li>
-										<li><a href="#2"><a href="dm2.html">Вторая</a></span></a></li>
+										<li><a href="#2"><a href="dm2.php">Вторая</a></span></a></li>
 									</ul>
 								</li>
 							</ul>
@@ -45,13 +43,24 @@
 							
 						</nav>
 
-				</div>
-
-			
+				
 			</div>
 
 		
 			<div id="main">
+			
+				<div class="icon-menu">
+					<img src="images/menu.png" alt="" class="open">
+				</div>
+				
+					<div class="container">
+
+							<header>
+								<h2>Лабораторная работа по ДМ №1</h2>
+							</header>
+							<p>Ввод осуществляется через запятую:</p>
+
+					</div>
 			
 					<form class="form" action="" method="POST">
 						<input class="put" type="text" name="massA" placeholder="Первое множество" ><br>
@@ -296,7 +305,8 @@
 	</div>
 					
 			</div>
-			
+			<script src="js/jquery-latest.min.js"></script>
+			<script src="js/menu.js"></script>
 		
 	</body>
 </html>

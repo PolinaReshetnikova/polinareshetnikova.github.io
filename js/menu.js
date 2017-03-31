@@ -1,46 +1,16 @@
-/*$('.menu-bar').on('click', function(){
-	$("#header").css("left", "0");
-	element = $('#header');
+$('.icon-menu').on('click', function(){
+	
+	
+	element = $('.menu');
 	color = element.css('left');
 
+	if (color != 0) {
+		$(".menu").css("left", "0");
+	}
+	
 	if (color != -375) {
-		$('.menu-bar').on('click', function(){
-			$("#header").css("left", "-375");
+		$('.icon-menu').on('click', function(){
+			$(".menu").css("left", "-375");
 		});
 	}
-});*/
-
-if ((window.innerWidth >= 737) && (window.innerWidth <= 960)) {
-    var main = function() {
-        $('.icon-menu').click(function() {
-            $('#header').animate({
-                left: '0px'
-            }, 600);
-        });
-		
-       
-        $('.icon-close').click(function() {
-            $('#header').animate({
-                left: '-375px'
-            }, 600);
-        });
-    };
-}
-
-if (window.innerWidth < 736)  {
-    var main = function() {
-        $('.icon-menu').click(function() {
-            $('#header').animate({
-                left: '0px'
-            }, 600);
-        });
-
-
-        $('.icon-close').click(function() {
-            $('#header').animate({
-                left: '-375px'
-            }, 600);
-        });
-    };
-}
-$(document).ready(main);
+});

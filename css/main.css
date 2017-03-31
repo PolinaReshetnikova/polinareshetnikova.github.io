@@ -1,7 +1,7 @@
 @import url("font-awesome.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -241,56 +241,7 @@
 			width: 160px;
 			height: auto;
 		}
-		.image-viewer {
-				position: fixed;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-			}
-			.image-viewer--hidden {
-				display: none;
-			}
-			.image-viewer--show {
-				display: block;
-			}
-			.image-viewer__overlay {
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				background-color: grey;
-				opacity: 0.8;
-			}
-			.image-viewer__big-image {
-				position: absolute;
-			}
-			.image-viewer__big-image--vertical {
-				width: auto;
-				height: 80%;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-				
-			}
-			.image-viewer__big-image--horizontal {
-				width: 80%;
-				height: auto;
-				left: 50%;
-				top: 50%;
-				transform: translate(-50%, -50%);
-			}
-			.image-viewer__btn-close {
-				position: absolute;
-				right: 5%;
-				top: 5%;
-				border: none;
-				background-color: transparent;
-				cursor: pointer;
-			}
-			.image-viewer__btn-close:hover {
-				color: blue;
-			}
-
+		
 
 /* Header */
 
@@ -316,16 +267,17 @@
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 375px;
+		width: 300px;
 	}
 
 		
 
 	#logo {
 		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
+		margin: 1.75em 1.5em 0 1.5em;
 		min-height: 48px;
 		cursor: default;
+		z-index: 5;
 	}
 
 		#logo h1 {
@@ -345,6 +297,7 @@
 
 	#nav ul {
 		margin-bottom: 0;
+		z-index: 6;
 	}
 		#nav li {
 			position: relative;
@@ -353,7 +306,7 @@
 		
 		#nav ul li a {
 			display: block;
-			padding: 3px 1.5em 0.5em 1.5em;
+			padding: 3px 1.5em 3px 1.5em;
 			color: #fff;
 			text-decoration: none;
 			outline: 0;
@@ -400,6 +353,7 @@
 				
 	#nav2 ul {
 		margin-bottom: 10px;
+		z-index: 5;
 	}
 
 		#nav2 ul li {
@@ -424,7 +378,7 @@
 /* Main */
 
 	#main {
-		margin-left: 375px;
+		margin-left: 300px;
 	}
 
 		#main > section {
@@ -488,16 +442,6 @@
 			}
 			
 			.open {
-				cursor: pointer;
-			}
-			
-			.icon-close {
-				visibility: hidden;
-				position: absolute;
-				padding: 5px;
-			}
-			
-			.close {
 				cursor: pointer;
 			}
 			
@@ -597,7 +541,7 @@
 	}
 	
 	.lightbox figure img {
-		border: 5px solid #2F4F4F;
+		border: 10px ridge #2F4F4F;
 	}
 	
 	.next, .prev {
@@ -623,7 +567,7 @@
 
 		/* Header */
 
-			#header {
+			.menu {
 				width: 300px;
 			}
 
@@ -686,7 +630,7 @@
 
 		/* Header */
 
-			#header {
+			.menu {
 				width: 20%;
 			}
 
@@ -748,7 +692,7 @@
 				font-size: 16pt;
 			}
 
-			header br {
+			menu br {
 				display: none;
 			}
 
@@ -771,7 +715,7 @@
 
 		/* Header */
 
-	#header {
+	.menu {
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -788,21 +732,14 @@
 		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
 		color: #fff;
 		height: 100%;
-		left: -375;
+		left: -350px;
 		overflow-y: auto;
 		position: fixed;
 		text-align: right;
 		top: 0;
-		width: 375px;
+		width: 350px;
 	}
-
-		
-			.top {
-				margin-left: 375px;
-				width: 100%;
-				height: 100px;
-				opacity: 0;
-			}
+	
 			
 
 			#logo {
@@ -846,10 +783,6 @@
 			
 				
 			.icon-menu {
-				visibility: visible;
-			}
-			
-			.icon-close {
 				visibility: visible;
 			}
 				
@@ -899,6 +832,7 @@
 			.container {
 				padding: 0 15px 0 15px;
 			}
+			
 
 		/* List */
 
@@ -924,11 +858,7 @@
 			.icon-menu {
 				visibility: visible;
 			}
-			
-			.icon-close {
-				visibility: visible;
-			}
-			
+
 				
 			#wrapper{
 				width: 400px;
